@@ -12,6 +12,7 @@ export const useLocalStorage = (key, initialValue) => {
     // if not, initialValue is returned (undefined, null, '', and false are falsy)
 
     const item = window.localStorage.getItem(key);
+    // console.log(item);
     return item ? JSON.parse(item) : initialValue;
   });
 
